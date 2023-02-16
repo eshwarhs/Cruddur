@@ -29,6 +29,8 @@
 ![Billing Alarm](assets/Billing%20Alarm.png)
 
 ### Recreate Conceptual Diagram
+![Billing Alarm](assets/Conceptual%20Diagram.png)
 
 ### Recreate Logical Architectural Design
+![Billing Alarm](assets/Logical%20Architecture%20Diagram.png)
 
