@@ -30,11 +30,11 @@
 
 
 ### Recreate Conceptual Diagram
-[Conceptual Diagram](https://lucid.app/lucidchart/b502b616-fac9-499e-83a4-41740ff720b9/edit?viewport_loc=-312%2C-109%2C2219%2C1123%2C0_0&invitationId=inv_00755f14-a806-463c-b52e-1b788ae39689)
+[LucidChart Link for Conceptual Diagram](https://lucid.app/lucidchart/b502b616-fac9-499e-83a4-41740ff720b9/edit?viewport_loc=-312%2C-109%2C2219%2C1123%2C0_0&invitationId=inv_00755f14-a806-463c-b52e-1b788ae39689)
 ![Conceptual Diagram](assets/Conceptual%20Diagram.png)
 
 
 ### Recreate Logical Architectural Design
-[Logical Diagram](https://lucid.app/lucidchart/4bff9e2d-7f29-40e3-93d5-0cfa7d97e87e/edit?viewport_loc=-227%2C-116%2C2154%2C1090%2C0_0&invitationId=inv_7b5c2704-0fe5-4b88-9b98-31f53699f0a4)
+[LucidChart Link for Logical Diagram](https://lucid.app/lucidchart/4bff9e2d-7f29-40e3-93d5-0cfa7d97e87e/edit?viewport_loc=-227%2C-116%2C2154%2C1090%2C0_0&invitationId=inv_7b5c2704-0fe5-4b88-9b98-31f53699f0a4)
 ![Logical Diagram](assets/Logical%20Architecture%20Diagram.png)
 
