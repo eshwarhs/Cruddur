@@ -41,4 +41,13 @@
 
 - Documented the Notification API on openAPI spec
 
+### Run DynamoDB local container 
+- Added DynamoDB docker to docker-compose
+- Created table in DynamDB and added an item to ensure that DynamoDB container is up and running
+
+### Run Postgres local container 
+- Added Postgres docker to docker-compose and corresponding volume
+- Logged into Postgres and verfied if it's running by running sample command
+
+
 ## Additional Homework/Tasks
