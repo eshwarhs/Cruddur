@@ -40,3 +40,5 @@
 ![Notifications on React](assets/week1/notification-frontend.png)
 
 - Documented the Notification API on openAPI spec
+
+## Additional Homework/Tasks
