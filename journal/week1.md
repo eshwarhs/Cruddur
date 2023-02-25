@@ -41,13 +41,70 @@
 
 - Documented the Notification API on openAPI spec
 
+I have added a new endoint for notifications. This API is documented along with the other APIs in the OpenAI document.
+
+![OpenAPI](assets/openapi.png)
+
 ### Run DynamoDB local container 
-- Added DynamoDB docker to docker-compose
-- Created table in DynamDB and added an item to ensure that DynamoDB container is up and running
+To test if the local DynamoDB works, I executed the following commands - 
+
+- Create a table
+
+```sh
+aws dynamodb create-table \
+    --endpoint-url http://localhost:8000 \
+    --table-name Music \
+    --attribute-definitions \
+        AttributeName=Artist,AttributeType=S \
+        AttributeName=SongTitle,AttributeType=S \
+    --key-schema AttributeName=Artist,KeyType=HASH AttributeName=SongTitle,KeyType=RANGE \
+    --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+    --table-class STANDARD
+```
+
+![DynamoDB](assets/week1/dynamodb-create-table.png)
+
+- Put an Item
+
+```sh
+aws dynamodb put-item \
+    --endpoint-url http://localhost:8000 \
+    --table-name Music \
+    --item \
+        '{"Artist": {"S": "No One You Know"}, "SongTitle": {"S": "Call Me Today"}, "AlbumTitle": {"S": "Somewhat Famous"}}' \
+    --return-consumed-capacity TOTAL  
+```
+
+![DynamoDB](assets/week1/dynamodb-put-item.png)
+
+- List Tables
+
+```sh
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+```
+
+- Get Records
+
+```sh
+aws dynamodb scan --table-name cruddur_cruds --query "Items" --endpoint-url http://localhost:8000
+````
+
+![DynamoDB](assets/week1/dynamodb-list-get.png)
+
 
 ### Run Postgres local container 
-- Added Postgres docker to docker-compose and corresponding volume
-- Logged into Postgres and verfied if it's running by running sample command
+
+To test if the PostgreSQL local works, I executed the following commands - 
+
+- Gain access to PostgreSQL - 
+
+```
+psql -Upostgres --host localhost
+```
+- Checked for tables, tuples, relations
+
+![PostgreSQL](assets/postgres.png)
+
 
 
 ## Additional Homework/Tasks
