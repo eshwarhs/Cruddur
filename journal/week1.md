@@ -103,7 +103,7 @@ psql -Upostgres --host localhost
 ```
 - Checked for tables, tuples, relations
 
-![PostgreSQL](assets/postgres.png)
+![PostgreSQL](assets/week1/postgres.png)
 
 
 
