@@ -43,7 +43,7 @@
 
 I have added a new endoint for notifications. This API is documented along with the other APIs in the OpenAI document.
 
-![OpenAPI](assets/openapi.png)
+![OpenAPI](assets/week1/openapi.png)
 
 ### Run DynamoDB local container 
 To test if the local DynamoDB works, I executed the following commands - 
@@ -108,3 +108,14 @@ psql -Upostgres --host localhost
 
 
 ## Additional Homework/Tasks
+
+Apart from the required tasks, I have completed the following homework tasks - 
+
+1. Push and tag an image to DockerHub
+
+![DockerHub](assets/week1/docker-push1.png)
+![DockerHub](assets/week1/docker-push2.png)
+![DockerHub](assets/week1/docker-hub.png)
+
+2. Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
+
