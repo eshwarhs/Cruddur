@@ -2,3 +2,4 @@ package-lock.json
 docker/dynamodb/shared-local-instance.db
 frontend-react-js/build/*
 *.deb
+session-manager-plugin.deb
