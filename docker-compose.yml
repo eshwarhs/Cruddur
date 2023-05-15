@@ -6,8 +6,6 @@ services:
     build: ./backend-flask
     ports:
       - "4567:4567"
-    volumes:
-      - ./backend-flask:/backend-flask
     networks:
       - cruddur-net
   frontend-react-js:
@@ -16,8 +14,6 @@ services:
     build: ./frontend-react-js
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend-react-js:/frontend-react-js
     networks:
       - cruddur-net
   dynamodb-local:
@@ -44,19 +40,19 @@ services:
       - cruddur-net
     volumes: 
       - db:/var/lib/postgresql/data
-  xray-daemon:
-    hostname: xray-daemon
-    image: "amazon/aws-xray-daemon"
-    environment:
-      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
-      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
-      AWS_REGION: "us-east-1"
-    command:
-      - "xray -o -b xray-daemon:2000"
-    ports:
-      - 2000:2000/udp
-    networks:
-      - cruddur-net
+  # xray-daemon:
+  #   hostname: xray-daemon
+  #   image: "amazon/aws-xray-daemon"
+  #   environment:
+  #     AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+  #     AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+  #     AWS_REGION: "us-east-1"
+  #   command:
+  #     - "xray -o -b xray-daemon:2000"
+  #   ports:
+  #     - 2000:2000/udp
+  #   networks:
+  #     - cruddur-net
 
 # the name flag is a hack to change the default prepend folder
 # name when outputting the image names
