@@ -1,0 +1,10 @@
+[deploy]
+bucket = 'cfn-artifacts-eshwar'
+region = 'us-east-1'
+stack_name = 'CrdFrontend'
+
+[parameters]
+CertificateArn = 'arn:aws:acm:us-east-1:183974383951:certificate/b7bd9ca8-a41a-4ef6-9601-65b686a9e883'
+WwwBucketName = 'www.crudders.click'
+RootBucketName = 'crudders.click'
+HostedZoneId = 'Z0461903D17QCXP11WIS'
