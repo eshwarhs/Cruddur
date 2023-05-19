@@ -3,20 +3,21 @@ import './ActivityContent.css';
 import { Link } from "react-router-dom";
 import { format_datetime, time_ago } from '../lib/DateTimeFormats';
 import {ReactComponent as BombIcon} from './svg/bomb.svg';
+import ProfileAvatar from 'components/ProfileAvatar'
 
 export default function ActivityContent(props) {
   let expires_at;
   if (props.activity.expires_at) {
     expires_at =  <div className="expires_at" title={format_datetime(props.activity.expires_at)}>
                     <BombIcon className='icon' />
-                    <span className='ago'>{time_ago(props.activity.expires_at)}</span>
+                    <span className='ago'>{time_ago(props.activity.expires_at, false)}</span>
                   </div>
 
   }
 
   return (
     <div className='activity_content_wrap'>
-      <div className='activity_avatar'></div>
+      <div className='activity_avatar'><ProfileAvatar id={props.id} /></div>
       <div className='activity_content'>
         <div className='activity_meta'>
           <Link className='activity_identity' to={`/@`+props.activity.handle}>
@@ -25,7 +26,7 @@ export default function ActivityContent(props) {
           </Link>{/* activity_identity */}
           <div className='activity_times'>
             <div className="created_at" title={format_datetime(props.activity.created_at)}>
-              <span className='ago'>{time_ago(props.activity.created_at)}</span> 
+              <span className='ago'>{time_ago(props.activity.created_at, true)} ago</span> 
             </div>
             {expires_at}
           </div>{/* activity_times */}

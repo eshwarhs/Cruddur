@@ -1,0 +1,12 @@
+[deploy]
+bucket = 'cfn-artifacts-eshwar'
+region = 'us-east-1'
+stack_name = 'CrdCicd'
+
+[parameters]
+ServiceStack = 'CrdSrvBackendFlask'
+ClusterStack = 'CrdCluster'
+GitHubBranch = 'prod'
+GithubRepo = 'eshwarhs/aws-bootcamp-cruddur-2023'
+ArtifactBucketName = "codepipeline-cruddur-artifacts-eshwar"
+BuildSpec = 'backend-flask/buildspec.yml'

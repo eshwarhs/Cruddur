@@ -1,0 +1,8 @@
+[deploy]
+bucket = 'cfn-artifacts-eshwar'
+region = 'us-east-1'
+stack_name = 'CrdSrvBackendFlask'
+
+[parameters]
+EnvFrontendUrl = 'https://crudders.click'
+EnvBackendUrl = 'https://api.crudders.click'
