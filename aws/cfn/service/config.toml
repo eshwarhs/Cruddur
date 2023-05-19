@@ -4,5 +4,5 @@ region = 'us-east-1'
 stack_name = 'CrdSrvBackendFlask'
 
 [parameters]
-EnvFrontendUrl = 'crudders.click'
-EnvBackendUrl = 'api.crudders.click'
+EnvFrontendUrl = 'https://crudders.click'
+EnvBackendUrl = 'https://api.crudders.click'
