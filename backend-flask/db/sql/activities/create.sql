@@ -6,7 +6,7 @@ INSERT INTO public.activities (
 VALUES (
   (SELECT uuid 
     FROM public.users 
-    WHERE public.users.cognito_user_id = %(cognito_user_id)s
+    WHERE public.users.cognito_user_id = %(handle)s
     LIMIT 1
   ),
   %(message)s,
