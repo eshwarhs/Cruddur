@@ -51,7 +51,6 @@ export default function ConfirmationPage() {
     }
     return false
   }
-  
 
   let el_errors;
   if (errors){

@@ -43,7 +43,7 @@ export default function UserFeedPage() {
       }
     } catch (err) {
       console.log(err);
-    }
+  }
   };
 
   React.useEffect(()=>{
