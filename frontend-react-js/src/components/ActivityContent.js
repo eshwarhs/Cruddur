@@ -3,6 +3,7 @@ import './ActivityContent.css';
 import { Link } from "react-router-dom";
 import { format_datetime, time_ago, time_future } from '../lib/DateTimeFormats';
 import {ReactComponent as BombIcon} from './svg/bomb.svg';
+import ProfileAvatar from 'components/ProfileAvatar'
 
 export default function ActivityContent(props) {
 
@@ -17,7 +18,7 @@ export default function ActivityContent(props) {
 
   return (
     <div className='activity_content_wrap'>
-      <Link className='activity_avatar'to={`/@`+props.activity.handle} ></Link>
+      <Link className='activity_avatar'to={`/@`+props.activity.handle} ><ProfileAvatar id={props.id} /></Link>
       <div className='activity_content'>
         <div className='activity_meta'>
           <div className='activity_identity' >

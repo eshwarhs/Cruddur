@@ -2,7 +2,7 @@ import './ProfileForm.css';
 import React from "react";
 import process from 'process';
 import {getAccessToken} from 'lib/CheckAuth';
-import {put} from 'lib/Requests';
+import {post} from 'lib/Requests';
 import FormErrors from 'components/FormErrors';
 
 export default function ProfileForm(props) {
@@ -19,16 +19,19 @@ export default function ProfileForm(props) {
     console.log('ext',extension)
     try {
       const gateway_url = `${process.env.REACT_APP_API_GATEWAY_ENDPOINT_URL}/avatars/key_upload`
+      console.log("Gateway_url", gateway_url)
       await getAccessToken()
       const access_token = localStorage.getItem("access_token")
+      console.log("access_token", access_token)
       const json = {
         extension: extension
       }
+      console.log("json", json)
       const res = await fetch(gateway_url, {
         method: "POST",
         body: JSON.stringify(json),
         headers: {
-          'Origin': process.env.REACT_APP_FRONTEND_URL,
+          'Origin': '*',
           'Authorization': `Bearer ${access_token}`,
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -80,7 +83,7 @@ export default function ProfileForm(props) {
       bio: bio,
       display_name: displayName
     }
-    put(url,payload_data,{
+    post(url,payload_data,{
       auth: true,
       setErrors: setErrors,
       success: function(data){
