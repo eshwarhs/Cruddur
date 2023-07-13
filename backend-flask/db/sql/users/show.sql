@@ -25,6 +25,7 @@ SELECT
     FROM public.activities
     WHERE
       activities.user_uuid = users.uuid
+      AND activities.expires_at>now()
     ORDER BY activities.created_at DESC 
     LIMIT 40
   ) array_row) as activities
