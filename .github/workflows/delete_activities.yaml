@@ -3,6 +3,7 @@ name: Delete Activities
 on:
   schedule:
     - cron: '0 0 * * *'  # Run every day at 12 AM UTC
+  workflow_dispatch:
 
 jobs:
   run-script:
