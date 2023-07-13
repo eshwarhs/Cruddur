@@ -76,6 +76,7 @@ export default function ActivityForm(props) {
               <option value='12-hours'>12 hours</option>
               <option value='3-hours'>3 hours</option>
               <option value='1-hour'>1 hour </option>
+              <option value='30-mins'>30 mins </option>
             </select>
           </div>
           <FormErrors errors={errors} />

@@ -24,7 +24,9 @@ class CreateActivity:
     elif (ttl == '3-hours'):
       ttl_offset = timedelta(hours=3) 
     elif (ttl == '1-hour'):
-      ttl_offset = timedelta(hours=1) 
+      ttl_offset = timedelta(hours=1)
+    elif (ttl == '30-mins'):
+      ttl_offset = timedelta(hours=0.5) 
     else:
       model['errors'] = ['ttl_blank']
 
