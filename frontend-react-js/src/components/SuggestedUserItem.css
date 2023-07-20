@@ -38,3 +38,11 @@
   flex-shrink: 0;
   margin-right: 12px;
 }
+
+.suggested_users .avatar .suggested-avatar {
+  background: rgb(149,0,255);
+  height: 36px;
+  width: 36px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
