@@ -38,6 +38,9 @@ Parameters:
   EnvOtelServiceName:
     Type: String
     Default: backend-flask
+  EnvDdbTableName:
+    Type: String
+    Default: backend-flask
   EnvOtelExporterOtlpEndpoint:
     Type: String
     Default: https://api.honeycomb.io
@@ -164,6 +167,8 @@ Resources:
               awslogs-region: !Ref AWS::Region
               awslogs-stream-prefix: !Ref ServiceName
           Environment:
+            - Name: 'DDB_MESSAGE_TABLE'
+              Value: !Ref EnvDdbTableName
             - Name: 'OTEL_SERVICE_NAME'
               Value: !Ref EnvOtelServiceName
             - Name: 'OTEL_EXPORTER_OTLP_ENDPOINT'
