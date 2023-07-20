@@ -5,6 +5,13 @@ NO_COLOR='\033[0m'
 LABEL="db-kill-all"
 printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
 
+if [ "$1" = "prod" ]; then
+  echo "Running in production mode"
+  URL=$PROD_CONNECTION_URL
+else
+  URL=$CONNECTION_URL
+fi
+
 ABS_PATH=$(readlink -f "$0")
 DB_PATH=$(dirname $ABS_PATH)
 BIN_PATH=$(dirname $DB_PATH)
@@ -13,4 +20,4 @@ BACKEND_FLASK_PATH="$PROJECT_PATH/backend-flask"
 kill_path="$BACKEND_FLASK_PATH/db/kill-all-connections.sql"
 echo $kill_path
 
-psql $CONNECTION_URL cruddur < $kill_path
+psql $URL cruddur < $kill_path

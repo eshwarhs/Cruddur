@@ -11,7 +11,7 @@ SELECT
         count(true) 
        FROM public.activities
        WHERE
-        activities.user_uuid = users.uuid
+        activities.user_uuid = users.uuid AND activities.expires_at > now()
        ) as cruds_count
   ) object_row) as profile,
   (SELECT COALESCE(array_to_json(array_agg(row_to_json(array_row))),'[]'::json) FROM (
@@ -26,7 +26,7 @@ SELECT
     FROM public.activities
     WHERE
       activities.user_uuid = users.uuid
-      AND activities.expires_at>now()
+      AND activities.expires_at > now()
     ORDER BY activities.created_at DESC 
     LIMIT 40
   ) array_row) as activities
