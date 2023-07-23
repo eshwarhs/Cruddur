@@ -22,7 +22,7 @@ export default function MessageForm(props) {
     const url = `${process.env.REACT_APP_BACKEND_URL}/api/messages`
     let payload_data = { 'message': message }
     if (params.handle) {
-      payload_data.handle = params.handle
+      payload_data.handle = params.handle.replace("@","")
     } else {
       payload_data.message_group_uuid = params.message_group_uuid
     }
