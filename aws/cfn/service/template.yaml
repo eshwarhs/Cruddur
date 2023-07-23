@@ -136,14 +136,14 @@ Resources:
       RequiresCompatibilities:
         - 'FARGATE'
       ContainerDefinitions:
-        - Name: 'xray'
-          Image: 'public.ecr.aws/xray/aws-xray-daemon'
-          Essential: true
-          User: '1337'
-          PortMappings:
-            - Name: 'xray'
-              ContainerPort: 2000
-              Protocol: 'udp'
+        # - Name: 'xray'
+        #   Image: 'public.ecr.aws/xray/aws-xray-daemon'
+        #   Essential: true
+        #   User: '1337'
+        #   PortMappings:
+        #     - Name: 'xray'
+        #       ContainerPort: 2000
+        #       Protocol: 'udp'
         - Name: 'backend-flask'
           Image: !Ref EcrImage 
           Essential: true
