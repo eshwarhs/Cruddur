@@ -36,7 +36,6 @@ def load(app):
   def data_create_message():
     message_group_uuid   = request.json.get('message_group_uuid',None)
     user_receiver_handle = request.json.get('handle',None)
-    # user_receiver_handle = user_receiver_handle.replace("@", "")
     message = request.json['message']
     if message_group_uuid == None:
       # Create for the first time
