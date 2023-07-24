@@ -1,11 +1,13 @@
 import './MessageItem.css';
 import { Link } from "react-router-dom";
 import { format_datetime, message_time_ago } from '../lib/DateTimeFormats';
+import ProfileAvatar from 'components/ProfileAvatar'
 
 export default function MessageItem(props) {
   return (
     <div className='message_item'>
-      <Link className='message_avatar' to={`/messages/@`+props.message.handle}></Link>
+      {/* <Link className='message_avatar' to={`/messages/@`+props.message.handle}></Link> */}
+      <div className='message_avatar'> <ProfileAvatar id={props.message.cognito_user_uuid} /></div>
       <div className='message_content'>
         <div classsName='message_meta'>
           <div className='message_identity'>

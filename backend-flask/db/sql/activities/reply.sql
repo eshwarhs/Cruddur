@@ -13,8 +13,8 @@ VALUES (
   %(message)s,
   %(reply_to_activity_uuid)s,
   (SELECT expires_At 
-    FROM public.activites 
-    WHERE activites.uuid = %(reply_to_activity_uuid)s
+    FROM public.activities 
+    WHERE activities.uuid = %(reply_to_activity_uuid)s
     LIMIT 1
   )
 ) RETURNING uuid;

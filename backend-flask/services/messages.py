@@ -21,5 +21,13 @@ class Messages:
     print("list_messages")
     print(data)
 
-    model['data'] = data
+    sql = db.template('users','cognito_user_id_from_handle')
+    temp = []
+    for d in data:
+      handle = d['handle']
+      cog_id = db.query_value(sql, {'handle': handle})
+      d['cognito_user_uuid'] = cog_id
+      temp.append(d)
+
+    model['data'] = temp
     return model
