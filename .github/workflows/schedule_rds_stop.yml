@@ -26,5 +26,5 @@ jobs:
 
       - name: Stop AWS RDS Instance
         run: |
-          chmod +x stop_rds_instance.sh
+          chmod +x ./bin/stop_rds_instance.sh
           ./bin/stop_rds_instance.sh
