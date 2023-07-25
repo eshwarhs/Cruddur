@@ -1,0 +1,30 @@
+name: Schedule RDS Stop
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # Every Monday at 12 AM UTC (adjust according to your timezone)
+  workflow_dispatch:  # Enable manual triggering
+    inputs:
+      manual_run:
+        description: 'Manually trigger the RDS start'
+
+jobs:
+  start_rds_instance:
+    name: Start AWS RDS Instance
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'us-east-1'  # Replace with your desired AWS region
+
+      - name: Start AWS RDS Instance
+        run: |
+          chmod +x ./bin/start_rds_instance.sh
+          ./bin/start_rds_instance.sh
