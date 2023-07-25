@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RDS_INSTANCE_IDENTIFIER="YOUR_RDS_INSTANCE_IDENTIFIER"
+RDS_INSTANCE_IDENTIFIER="cruddur-instance"
 
 # Check the status of the RDS instance
 RDS_STATUS=$(aws rds describe-db-instances --db-instance-identifier $RDS_INSTANCE_IDENTIFIER --query 'DBInstances[0].DBInstanceStatus' --output text)
