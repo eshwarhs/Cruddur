@@ -1,4 +1,4 @@
-name: Schedule RDS Stop
+name: Schedule RDS Start
 
 on:
   schedule:
