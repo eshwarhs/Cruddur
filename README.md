@@ -4,6 +4,13 @@
 
 Cruddur is an online social media and social networking service. It is a microblogging platform with expiring posts that emphasizes privacy and the present moment. It allows users to post updates and thoughts known as "cruds", that automatically expire after a period of time, ensuring that personal information and conversations stay relevant and in the moment. Registered users can "re-crud", like and direct message other registered users.
 
+### Features
+
+* Micro-service architecture with containerization of applciation
+* User identity and access management using Amazon Cognito
+* Automated deployment on AWS using AWS Code Build and Cloud Formation
+* Distributed Tracing using HoneyComb and bug tracking using Rollbar
+
 ---
 
 ### Architecture Diagram
