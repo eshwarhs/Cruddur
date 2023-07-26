@@ -8,7 +8,7 @@ Link to the [website](https://crudders.click/)
 
 ### Features
 
-* Micro-service architecture with containerization of applciation
+* Micro-service architecture with containerization of application
 * User identity and access management using Amazon Cognito
 * Automated deployment on AWS using AWS Code Build and Cloud Formation
 * Distributed Tracing using HoneyComb and bug tracking using Rollbar
