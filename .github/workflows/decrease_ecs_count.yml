@@ -2,7 +2,7 @@ name: Decrease ECS Desired Task Count
 
 on:
   schedule:
-    - cron: '0 4 * * 1-5'  # Run the workflow every day at 13:00 UTC
+    - cron: '0 4 * * 1-6'  # Run the workflow every day at 13:00 UTC
   workflow_dispatch:  # Enable manual triggering
     inputs:
       manual_run:
