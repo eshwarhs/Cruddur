@@ -2,7 +2,7 @@ name: Schedule RDS Stop
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Every Monday at 12 AM UTC (adjust according to your timezone)
+    - cron: '0 4 * * 1-5' 
   workflow_dispatch:  # Enable manual triggering
     inputs:
       manual_run:
