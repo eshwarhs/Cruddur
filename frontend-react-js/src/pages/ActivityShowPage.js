@@ -22,7 +22,7 @@ export default function ActivityShowPage() {
   const dataFetchedRef = React.useRef(false);
   const params = useParams();
 
-	const navigate = useNavigate();
+	const navigate = useNavigate(); 
 	const goBack = () => {
 		navigate(-1);
 	}
