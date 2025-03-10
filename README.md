@@ -11,7 +11,7 @@ Link to the [website](https://crudders.click/)
 * Micro-service architecture with containerization of application
 * User identity and access management using Amazon Cognito
 * Automated deployment on AWS using AWS Code Build and Cloud Formation
-* Distributed Tracing using HoneyComb and bug tracking using Rollbar
+* Distributed Tracing using HoneyComb and error tracking using Rollbar
 
 ---
 
